@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technologies</title>
+</head>
+<body>
+    <script>
+        // const bodyElement = document.body;
+        const myDiv = document.createElement('div');
+        myDiv.className = 'myDiv'
+        myDiv.setAttribute('id', 'container')
+        document.body.appendChild(myDiv);
+
+
+        myDiv.style.border = '1px solid black';
+        myDiv.style.margin = '10px auto';
+        myDiv.style.height = '45vh'
+        myDiv.style.marginLeft = '25%'
+        myDiv.style.marginTop = '25vh'
+        myDiv.style.width = '50vw'
+        myDiv.style.position = 'relative'; // डिव का position सेट करें
+        myDiv.style.alignItems = 'center';
+        myDiv.style.backgroundSize = 'cover';
+        myDiv.style.display = 'flex';
+        myDiv.style.flexDirection = 'column'; // डिव के अंदर आइटम्स को वर्टिकल करें  
+        myDiv.style.backgroundImage = "url('https://cdn.vectorstock.com/i/500p/02/61/abstract-technology-background-various-vector-28510261.jpg')"
+
+
+        const heading = document.createElement('h1')
+        heading.textContent = 'Web Technologies';
+        heading.setAttribute('id', 'heading');
+        heading.style.color = 'white';
+        heading.style.marginBottom = '10'
+        heading.style.textAlign = 'center';
+        myDiv.appendChild(heading);
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = 'This is a web technical page' 
+        paragraph.setAttribute('id', 'description');
+        paragraph.style.textAlign = 'center';
+        paragraph.style.color = 'white';
+        paragraph.style.marginBottom = '10px'
+        myDiv.appendChild(paragraph);
+
+        const button = document.createElement('button');
+        button.textContent = 'Change Heading';
+        button.setAttribute('id', 'changeButton');
+        button.style.border = '1px solid black';
+        // button,style.padding = '10px 20px';
+        button.style.cursor = 'pointer';
+        button.style.backgroundColor = 'white'
+        myDiv.appendChild(button);
+       
+        
+        const headingElement = document.getElementById('heading')
+        const buttonElement = document.getElementById('changeButton');
+
+        buttonElement.addEventListener('click', () => {
+        headingElement.textContent = 'updated Heading';
+        });
+
+    </script>
+</body>
+</html>
